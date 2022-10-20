@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'rikkei.academy'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+    implementation group: 'org.springframework', name: 'spring-tx', version: '5.3.23'
+    implementation group: 'org.springframework', name: 'spring-orm', version: '5.3.23'
+    implementation('org.hibernate:hibernate-core:5.4.3.Final')
+    implementation('org.thymeleaf:thymeleaf-spring5:3.0.15.RELEASE')
+    implementation('mysql:mysql-connector-java:8.0.30')
+    implementation('org.springframework:spring-webmvc:5.3.23')
+
+}
+
+test {
+    useJUnitPlatform()
+}
